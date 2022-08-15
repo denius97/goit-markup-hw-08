@@ -1,0 +1,31 @@
+.address {
+  font-style: inherit;
+
+  &__item {
+    line-height: 1.5;
+  }
+
+  &__item:not(:last-child) {
+    margin-bottom: 9px;
+  }
+
+  &__street {
+    color: var(--light-txt-col);
+    transition: color var(--main-transition);
+  }
+
+  &__street:hover,
+  &__street:focus {
+    color: var(--footer-txt-col);
+  }
+
+  &__contacts {
+    color: var(--footer-txt-col);
+    transition: color var(--main-transition);
+  }
+
+  &__contacts:hover,
+  &__contacts:focus {
+    color: var(--light-txt-col);
+  }
+}

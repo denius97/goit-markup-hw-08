@@ -1,0 +1,26 @@
+.clients {
+  --flex-quantity: 6;
+
+  &__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 92px;
+    color: var(--social-icon);
+    border-width: 1px;
+    border-style: solid;
+    border-color: currentcolor;
+    border-image: initial;
+    border-radius: 4px;
+    transition: color var(--main-transition);
+  }
+
+  &__link:hover,
+  &__link:focus {
+    color: var(--accent-btn-bgc);
+  }
+
+  &__icon {
+    fill: currentColor;
+  }
+}

@@ -1,0 +1,32 @@
+.social-list {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    color: var(--social-icon);
+    border-radius: 50%;
+    transition: color var(--main-transition),
+      background-color var(--main-transition);
+  }
+
+  &__item:hover,
+  &__item:focus {
+    color: var(--light-txt-col);
+    background-color: var(--accent-btn-bgc);
+  }
+
+  &__icon {
+    fill: currentColor;
+  }
+
+  &__item--footer {
+    color: var(--light-txt-col);
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+}

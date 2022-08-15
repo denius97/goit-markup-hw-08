@@ -1,0 +1,21 @@
+.our-work {
+    padding-top: 0;
+
+&__item {
+        position: relative;
+    }
+
+    &__txt {
+        position: absolute;
+        bottom: 0;
+        padding-top: 27px;
+        padding-bottom: 27px;
+        width: 100%;
+        font-weight: 700;
+        line-height: 1.14;
+        text-align: center;
+        text-transform: uppercase;
+        color: var(--light-txt-col);
+        background-color: rgba(47, 48, 58, 0.8);
+    }
+}

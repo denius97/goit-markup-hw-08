@@ -1,0 +1,31 @@
+:root {
+
+    /* fonts */
+    --main-font: 'roboto', sans-serif;
+    --secondary-font: 'raleway', sans-serif;
+
+    /* text colors  */
+    --main-txt-col: #757575;
+    --secondary-txt-col: #212121;
+    --accent-txt-col: #2196f3;
+    --dark-txt-col: #000;
+    --light-txt-col: #fff;
+    --footer-txt-col: rgba(255, 255, 255, 0.6);
+
+    /* background-colors  */
+    --main-bgc: #2f303a;
+    --secondary-bgc: #f5f4fa;
+    --hero-bgc: #c4c4c4;
+    --accent-btn-bgc: #2196f3;
+    --header-border: #ececec;
+    --portfolio-border: #eeeeee;
+    --hero-btn-focus: #188ce8;
+    --social-icon: #afb1b8;
+
+    /* flex */
+    --flex-gap: 30px;
+    --flex-quantity: 3;
+
+    /* others */
+    --main-transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}

@@ -1,0 +1,45 @@
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  width: 528px;
+  height: 581px;
+  background-color: var(--light-txt-col);
+  border-radius: 4px;
+  padding: 40px;
+  transition: transform var(--main-transition);
+
+  .backdrop--is-hidden & {
+    transform: translate(-50%, -50%) scale(-1.2);
+  }
+
+  &__btn {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12);
+    background-color: transparent;
+    cursor: pointer;
+    transition: box-shadow var(--main-transition), color var(--main-transition);
+  }
+
+  &__btn:hover,
+  &__btn:focus {
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+      0px 2px 1px rgba(0, 0, 0, 0.2);
+    color: var(--accent-btn-bgc);
+  }
+
+  &__btn-icon {
+    fill: currentColor;
+  }
+}

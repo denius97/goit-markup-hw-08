@@ -1,0 +1,32 @@
+.footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: var(--main-bgc);
+
+  &__group {
+    display: flex;
+    align-items: baseline;
+  }
+
+  &__align:nth-child(n + 2) {
+    margin-left: 70px;
+  }
+
+  &__align:last-child {
+    margin-left: auto;
+  }
+
+  .logo {
+    display: inline-block;
+    margin-bottom: 20px;
+  }
+
+  &__title {
+    display: block;
+    font-weight: 700;
+    line-height: 1.14;
+    text-transform: uppercase;
+    color: var(--light-txt-col);
+    margin-bottom: 20px;
+  }
+}
