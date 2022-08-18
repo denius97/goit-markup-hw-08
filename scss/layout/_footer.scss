@@ -4,21 +4,40 @@
   background-color: var(--main-bgc);
 
   &__group {
-    display: flex;
-    align-items: baseline;
+    @media screen and (max-width: 1199px) {
+      text-align: center;
+    }
+
+    @media screen and (min-width: 1200px) {
+      align-items: baseline;
+      display: flex;
+    }
   }
 
-  &__align:nth-child(n + 2) {
-    margin-left: 70px;
-  }
+  &__wrap {
+    @media screen and (min-width: 768px) {
+      display: flex;
+      align-items: baseline;
+      padding-left: 61px;
+      gap: 165px;
+    }
 
-  &__align:last-child {
-    margin-left: auto;
-  }
+    @media screen and (max-width: 1199px) {
+      margin-bottom: 60px;
+    }
 
-  .logo {
-    display: inline-block;
-    margin-bottom: 20px;
+    @media screen and (min-width: 1200px) {
+      margin-right: auto;
+      padding: 0;
+      gap: 70px;
+    }
+  }
+  &__align {
+    @media screen and (max-width: 767px) {
+      &:not(:last-child) {
+        margin-bottom: 60px;
+      }
+    }
   }
 
   &__title {

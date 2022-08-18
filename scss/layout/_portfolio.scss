@@ -1,9 +1,30 @@
 .portfolio {
+  @media screen and (min-width: 768px) {
+    --flex-quantity: 2;
+  }
+
+  @media screen and (min-width: 1200px) {
+    --flex-quantity: 3;
+  }
   &__filter {
     display: flex;
     gap: 8px;
     justify-content: center;
     margin-bottom: 50px;
+    flex-wrap: wrap;
+
+    @media screen and (max-width: 767px) {
+      justify-content: left;
+      margin-bottom: 40px;
+    }
+
+    @media screen and (min-width: 768px) {
+      margin-bottom: 30px;
+    }
+
+    @media screen and (min-width: 1200px) {
+      margin-bottom: 50px;
+    }
   }
 
   &__card {
@@ -48,6 +69,11 @@
     padding: 20px 24px;
     border: 1px solid var(--portfolio-border);
     border-top: none;
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+      .flex-list__item:first-child & {
+        min-height: 146px;
+      }
+    }
   }
 
   &__subtitle {

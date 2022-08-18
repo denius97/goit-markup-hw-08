@@ -1,3 +1,35 @@
+.mobile-btn {
+  display: none;
+
+  @media screen and (max-width: 767px) {
+    position: relative;
+    display: inline-flex;
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+    z-index: 3;
+
+    &:hover,
+    &:focus &__icon {
+      fill: var(--accent-txt-col);
+    }
+
+    &.is-open &__open-icon {
+      visibility: hidden;
+    }
+
+    &__close-icon {
+      visibility: hidden;
+
+      .mobile-btn.is-open & {
+        visibility: visible;
+      }
+    }
+  }
+}
+
 .primary-btn {
   font-family: inherit;
   font-weight: 700;

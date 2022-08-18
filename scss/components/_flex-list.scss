@@ -1,10 +1,14 @@
 .flex-list {
-    display: flex;
-    gap: var(--flex-gap);
-    flex-wrap: wrap;
+  display: flex;
+  gap: var(--flex-gap);
+  flex-wrap: wrap;
+  @media screen and (min-width: 768px) {
+  }
 
-    &__item {
-    flex-basis: calc((100% - (var(--flex-quantity) - 1) * var(--flex-gap)) / var(--flex-quantity));
+  &__item {
+    flex-basis: calc(
+      (100% - (var(--flex-quantity) - 1) * var(--flex-gap)) /
+        var(--flex-quantity)
+    );
+  }
 }
-}
-

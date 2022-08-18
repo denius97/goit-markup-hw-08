@@ -3,10 +3,14 @@
     display: block;
     margin-bottom: 12px;
     font-size: 20px;
-    line-height: 1.15;
+    line-height: 1.5;
+
     text-align: center;
 
     color: var(--secondary-txt-col);
+    @media screen and (min-width: 1200px) {
+      line-height: 1.15;
+    }
   }
 
   &__group {
@@ -81,11 +85,14 @@
   }
 
   &__agreement {
+    @media screen and (max-width: 1199px) {
+      line-height: 1.17;
+    }
     line-height: 1.71;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 30px;
+    margin-bottom: 15px;
     transform: translateY(-2px);
     cursor: pointer;
   }
@@ -95,7 +102,7 @@
   }
 
   &__agriment-icon {
-    margin-right: 7px;
+    margin-right: 8px;
   }
 
   &__icon-uncheck {

@@ -1,17 +1,33 @@
 .logo {
+  font-size: 24px;
+  line-height: 1.17;
   font-family: var(--secondary-font);
   font-weight: 700;
-  font-size: 26px;
-  line-height: 1.19;
   color: var(--accent-txt-col);
 
   &__header-style {
     color: var(--dark-txt-col);
   }
+
+  @media screen and (min-width: 1200px) {
+    font-size: 26px;
+    line-height: 1.19;
+  }
+
+  .footer & {
+    display: inline-block;
+    margin-bottom: 20px;
+  }
 }
 
 .header__logo {
-  margin-right: 93px;
+  @media screen and (min-width: 768px) {
+    margin-right: 88px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-right: 93px;
+  }
 }
 
 .footer__logo {

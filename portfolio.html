@@ -21,43 +21,76 @@
     <link rel="stylesheet" href="./css/main.min.css" />
   </head>
 
-  <body class="body">
+  <body class="body" data-page>
     <header class="header">
       <div class="header__container container">
         <a class="logo header__logo link" href="./index.html"
           >Web<span class="logo__header-style">Studio</span></a
         >
-        <nav class="nav">
-          <ul class="nav__list list">
-            <li><a class="nav__link link" href="./index.html">Cтудія</a></li>
-            <li class="nav__current-item">
-              <a
-                class="nav__current-page nav__link link"
-                href="./portfolio.html"
-                >Портфоліо</a
+        <button
+          class="mobile-btn"
+          type="button"
+          aria-label="Перемикач мобільного меню"
+          aria-expanded="false"
+          aria-controls="mobile-window"
+          data-menu-button
+        >
+          <svg class="mobile-btn__icon" width="40" height="40">
+            <use
+              class="mobile-btn__open-icon"
+              href="./images/icons.svg#menu"
+            ></use>
+            <use
+              class="mobile-btn__close-icon"
+              href="./images/icons.svg#menu-close"
+            ></use>
+          </svg>
+        </button>
+        <div class="header__group">
+          <nav class="nav">
+            <ul class="nav__list list">
+              <li>
+                <a class="nav__link link" href="./index.html">Cтудія</a>
+              </li>
+              <li class="nav__current-item">
+                <a
+                  class="nav__current-page nav__link link"
+                  href="./portfolio.html"
+                  >Портфоліо</a
+                >
+              </li>
+              <li>
+                <a class="nav__link link" href="#address">Контакти</a>
+              </li>
+            </ul>
+          </nav>
+          <ul class="header__contacts list">
+            <li>
+              <a class="header__link link" href="mailto:info@devstudio.com"
+                ><svg class="header__icon" width="14" height="10">
+                  <use href="./images/icons.svg#envelope"></use>
+                </svg>
+                <svg class="header__icon" width="16" height="12">
+                  <use href="./images/icons.svg#envelope"></use>
+                </svg>
+                info@devstudio.com</a
               >
             </li>
-            <li><a class="nav__link link" href="#address">Контакти</a></li>
+            <li>
+              <a
+                class="header__link header__link--big link"
+                href="tel:+380961111111"
+                ><svg class="header__icon" width="10" height="14">
+                  <use href="./images/icons.svg#smartphone"></use>
+                </svg>
+                <svg class="header__icon" width="10" height="16">
+                  <use href="./images/icons.svg#smartphone"></use>
+                </svg>
+                +38 096 111 11 11</a
+              >
+            </li>
           </ul>
-        </nav>
-        <ul class="header__contacts list">
-          <li>
-            <a class="header__link link" href="mailto:info@devstudio.com"
-              ><svg class="header__icon" width="16" height="12">
-                <use href="./images/icons.svg#envelope"></use>
-              </svg>
-              info@devstudio.com
-            </a>
-          </li>
-          <li>
-            <a class="header__link link" href="tel:+380961111111"
-              ><svg class="header__icon" width="10" height="16">
-                <use href="./images/icons.svg#smartphone"></use>
-              </svg>
-              +38 096 111 11 11
-            </a>
-          </li>
-        </ul>
+        </div>
       </div>
     </header>
     <main>
@@ -87,12 +120,33 @@
             <li class="flex-list__item">
               <a class="portfolio__card link" href="">
                 <div class="portfolio__contain">
-                  <img
-                    src="images/portfolio-img/img-11.jpg"
-                    alt="Сайт Технокряк"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/portfolio/portfolio01_dt.jpg    1x,
+                        ./images/portfolio/portfolio01@2x_dt.jpg 2x
+                      "
+                    />
+
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/portfolio/portfolio01_tb.jpg    1x,
+                        ./images/portfolio/portfolio01@2x_tb.jpg 2x
+                      "
+                    />
+
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images/portfolio/portfolio01_mb.jpg    1x,
+                        ./images/portfolio/portfolio01@2x_mb.jpg 2x
+                      "
+                    />
+
+                    <img src="./images/team01_mb.jpg" alt="Сайт Технокряк" />
+                  </picture>
                   <p class="portfolio__text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
@@ -108,12 +162,36 @@
             <li class="flex-list__item">
               <a class="portfolio__card link" href="">
                 <div class="portfolio__contain">
-                  <img
-                    src="images/portfolio-img/img-12.jpg"
-                    alt="Постер New Orlean vs Golden Star"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/portfolio/portfolio02_dt.jpg    1x,
+                        ./images/portfolio/portfolio02@2x_dt.jpg 2x
+                      "
+                    />
+
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/portfolio/portfolio02_tb.jpg    1x,
+                        ./images/portfolio/portfolio02@2x_tb.jpg 2x
+                      "
+                    />
+
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images/portfolio/portfolio02_mb.jpg    1x,
+                        ./images/portfolio/portfolio02@2x_mb.jpg 2x
+                      "
+                    />
+
+                    <img
+                      src="./images/portfolio/portfolio02_mb.jp2"
+                      alt="Постер New Orlean vs Golden Star"
+                    />
+                  </picture>
                   <p class="portfolio__text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
@@ -131,12 +209,36 @@
             <li class="flex-list__item">
               <a class="portfolio__card link" href="">
                 <div class="portfolio__contain">
-                  <img
-                    src="images/portfolio-img/img-13.jpg"
-                    alt="Ресторан Seafood"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/portfolio/portfolio03_dt.jpg    1x,
+                        ./images/portfolio/portfolio03@2x_dt.jpg 2x
+                      "
+                    />
+
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/portfolio/portfolio03_tb.jpg    1x,
+                        ./images/portfolio/portfolio03@2x_tb.jpg 2x
+                      "
+                    />
+
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images/portfolio/portfolio03_mb.jpg    1x,
+                        ./images/portfolio/portfolio03@2x_mb.jpg 2x
+                      "
+                    />
+
+                    <img
+                      src="./images/portfolio/portfolio03_mb.jpg"
+                      alt="Ресторан Seafood"
+                    />
+                  </picture>
                   <p class="portfolio__text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
@@ -152,12 +254,36 @@
             <li class="flex-list__item">
               <a class="portfolio__card link" href="">
                 <div class="portfolio__contain">
-                  <img
-                    src="images/portfolio-img/img-14.jpg"
-                    alt="Навушники"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/portfolio/portfolio04_dt.jpg    1x,
+                        ./images/portfolio/portfolio04@2x_dt.jpg 2x
+                      "
+                    />
+
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/portfolio/portfolio04_tb.jpg    1x,
+                        ./images/portfolio/portfolio04@2x_tb.jpg 2x
+                      "
+                    />
+
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images/portfolio/portfolio04_mb.jpg    1x,
+                        ./images/portfolio/portfolio04@2x_mb.jpg 2x
+                      "
+                    />
+
+                    <img
+                      src="./images/portfolio/portfolio04_mb.jpg"
+                      alt="Навушники"
+                    />
+                  </picture>
                   <p class="portfolio__text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
@@ -173,12 +299,36 @@
             <li class="flex-list__item">
               <a class="portfolio__card link" href="">
                 <div class="portfolio__contain">
-                  <img
-                    src="images/portfolio-img/img-15.jpg"
-                    alt="Дві коробки"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/portfolio/portfolio05_dt.jpg    1x,
+                        ./images/portfolio/portfolio05@2x_dt.jpg 2x
+                      "
+                    />
+
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/portfolio/portfolio05_tb.jpg    1x,
+                        ./images/portfolio/portfolio05@2x_tb.jpg 2x
+                      "
+                    />
+
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images/portfolio/portfolio05_mb.jpg    1x,
+                        ./images/portfolio/portfolio05@2x_mb.jpg 2x
+                      "
+                    />
+
+                    <img
+                      src="./images/portfolio/portfolio05_mb.jpg"
+                      alt="Дві коробки"
+                    />
+                  </picture>
                   <p class="portfolio__text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
@@ -194,12 +344,36 @@
             <li class="flex-list__item">
               <a class="portfolio__card link" href="">
                 <div class="portfolio__contain">
-                  <img
-                    src="images/portfolio-img/img-16.jpg"
-                    alt="Сайт Inspiration has no Borders"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/portfolio/portfolio06_dt.jpg    1x,
+                        ./images/portfolio/portfolio06@2x_dt.jpg 2x
+                      "
+                    />
+
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/portfolio/portfolio06_tb.jpg    1x,
+                        ./images/portfolio/portfolio06@2x_tb.jpg 2x
+                      "
+                    />
+
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images/portfolio/portfolio06_mb.jpg    1x,
+                        ./images/portfolio/portfolio06@2x_mb.jpg 2x
+                      "
+                    />
+
+                    <img
+                      src="./images/portfolio/portfolio06_mb.jpg"
+                      alt="Сайт Inspiration has no Borders"
+                    />
+                  </picture>
                   <p class="portfolio__text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
@@ -217,12 +391,36 @@
             <li class="flex-list__item">
               <a class="portfolio__card link" href="">
                 <div class="portfolio__contain">
-                  <img
-                    src="images/portfolio-img/img-17.jpg"
-                    alt="Экземпляр видання Limited Edition"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/portfolio/portfolio07_dt.jpg    1x,
+                        ./images/portfolio/portfolio07@2x_dt.jpg 2x
+                      "
+                    />
+
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/portfolio/portfolio07_tb.jpg    1x,
+                        ./images/portfolio/portfolio07@2x_tb.jpg 2x
+                      "
+                    />
+
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images/portfolio/portfolio07_mb.jpg    1x,
+                        ./images/portfolio/portfolio07@2x_mb.jpg 2x
+                      "
+                    />
+
+                    <img
+                      src="./images/portfolio/portfolio07_mb.jpg"
+                      alt="Экземпляр видання Limited Edition"
+                    />
+                  </picture>
                   <p class="portfolio__text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
@@ -238,12 +436,36 @@
             <li class="flex-list__item">
               <a class="portfolio__card link" href="">
                 <div class="portfolio__contain">
-                  <img
-                    src="images/portfolio-img/img-18.jpg"
-                    alt="Логотип LAB"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/portfolio/portfolio08_dt.jpg    1x,
+                        ./images/portfolio/portfolio08@2x_dt.jpg 2x
+                      "
+                    />
+
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/portfolio/portfolio08_tb.jpg    1x,
+                        ./images/portfolio/portfolio08@2x_tb.jpg 2x
+                      "
+                    />
+
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images/portfolio/portfolio08_mb.jpg    1x,
+                        ./images/portfolio/portfolio08@2x_mb.jpg 2x
+                      "
+                    />
+
+                    <img
+                      src="./images/portfolio/portfolio08_mb.jpg"
+                      alt="Логотип LAB"
+                    />
+                  </picture>
                   <p class="portfolio__text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
@@ -259,12 +481,36 @@
             <li class="flex-list__item">
               <a class="portfolio__card link" href="">
                 <div class="portfolio__contain">
-                  <img
-                    src="images/portfolio-img/img-19.jpg"
-                    alt="Сайт Growing Business"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/portfolio/portfolio09_dt.jpg    1x,
+                        ./images/portfolio/portfolio09@2x_dt.jpg 2x
+                      "
+                    />
+
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/portfolio/portfolio09_tb.jpg    1x,
+                        ./images/portfolio/portfolio09@2x_tb.jpg 2x
+                      "
+                    />
+
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images/portfolio/portfolio09_mb.jpg    1x,
+                        ./images/portfolio/portfolio09@2x_mb.jpg 2x
+                      "
+                    />
+
+                    <img
+                      src="./images/portfolio/portfolio09_mb.jpg"
+                      alt="Сайт Growing Business"
+                    />
+                  </picture>
                   <p class="portfolio__text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
@@ -282,8 +528,8 @@
       </section>
     </main>
     <footer class="footer">
-      <div class="container">
-        <div class="footer__group">
+      <div class="footer__group container">
+        <div class="footer__wrap">
           <div class="footer__align">
             <a class="logo link" href="./index.html"
               >Web<span class="footer__logo">Studio</span></a
@@ -317,7 +563,7 @@
             <ul class="social-list list">
               <li class="social-item">
                 <a
-                  class="social-list__item social-list__item--footer link"
+                  class="social-list__link social-list__link--footer link"
                   href=""
                   aria-label="Instagram"
                 >
@@ -328,7 +574,7 @@
               </li>
               <li class="social-item">
                 <a
-                  class="social-list__item social-list__item--footer link"
+                  class="social-list__link social-list__link--footer link"
                   href=""
                   aria-label="Twitter"
                 >
@@ -339,7 +585,7 @@
               </li>
               <li class="social-item">
                 <a
-                  class="social-list__item social-list__item--footer link"
+                  class="social-list__link social-list__link--footer link"
                   href=""
                   aria-label="Facebook"
                 >
@@ -350,7 +596,7 @@
               </li>
               <li class="social-item">
                 <a
-                  class="social-list__item social-list__item--footer link"
+                  class="social-list__link social-list__link--footer link"
                   href=""
                   aria-label="Linkedin"
                 >
@@ -361,28 +607,82 @@
               </li>
             </ul>
           </div>
-          <form class="subscribe footer__align">
-            <strong class="footer__title">Підпишіться на розсилку</strong>
-            <div class="subscribe__wrap">
-              <label class="subscribe__group">
-                <input
-                  class="subscribe__input"
-                  type="email"
-                  name="subscribe-eamil"
-                  placeholder="example@mail.com"
-                  required
-                />
-                <span class="subscribe__label">E-mail</span>
-              </label>
-              <button type="submit" class="primary-btn primary-btn--icon">
-                Підписатися<svg class="subscribe__icon" width="24" height="24">
-                  <use href="./images/icons.svg#icon-send"></use>
-                </svg>
-              </button>
-            </div>
-          </form>
         </div>
+        <form class="subscribe footer__align">
+          <strong class="footer__title">Підпишіться на розсилку</strong>
+          <div class="subscribe__wrap">
+            <label class="subscribe__group">
+              <input
+                class="subscribe__input"
+                type="email"
+                name="subscribe-eamil"
+                placeholder="example@mail.com"
+                required
+              />
+              <span class="subscribe__label">E-mail</span>
+            </label>
+            <button type="submit" class="primary-btn primary-btn--icon">
+              Підписатися<svg class="subscribe__icon" width="24" height="24">
+                <use href="./images/icons.svg#icon-send"></use>
+              </svg>
+            </button>
+          </div>
+        </form>
       </div>
     </footer>
+
+    <div class="mobile-menu-backdrop" id="mobile-window" data-menu>
+      <div class="mobile-menu">
+        <ul class="mobile-menu__list list">
+          <li>
+            <a class="mobile-menu__link link" href="./index.html">Cтудія</a>
+          </li>
+          <li>
+            <a
+              class="mobile-menu__link mobile-menu__link--current link"
+              href="./portfolio.html"
+              >Портфоліо</a
+            >
+          </li>
+          <li>
+            <a class="mobile-menu__link link" href="#address">Контакти</a>
+          </li>
+        </ul>
+
+        <div class="mobile-menu__contacts">
+          <a
+            class="mobile-menu__contacts-link mobile-menu__contacts-link--big link"
+            href="tel:+380961111111"
+          >
+            +38 096 111 11 11</a
+          >
+
+          <a
+            class="mobile-menu__contacts-link link"
+            href="mailto:info@devstudio.com"
+          >
+            info@devstudio.com</a
+          >
+
+          <ul class="mobile-menu__social list">
+            <li class="mobile-menu__social-item">
+              <a href="" class="mobile-menu__social-link link">Instagram</a>
+            </li>
+            <li class="mobile-menu__social-item">
+              <a href="" class="mobile-menu__social-link link">Twitter</a>
+            </li>
+            <li class="mobile-menu__social-item">
+              <a href="" class="mobile-menu__social-link link">Facebook</a>
+            </li>
+            <li class="mobile-menu__social-item">
+              <a href="" class="mobile-menu__social-link link">LinkedIn</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- <script src="./js/header-scroll.js"></script> -->
+    <script src="./js/mobile-no-scroll.js"></script>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>

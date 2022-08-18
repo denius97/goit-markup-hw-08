@@ -1,18 +1,34 @@
 .subscribe {
-  &__wrap {
-    display: flex;
-    gap: 12px;
+  @media screen and (min-width: 1200px) {
+    &__wrap {
+      display: flex;
+      gap: 12px;
+    }
   }
-
   &__group {
+    display: block;
     position: relative;
-    width: 358px;
+
     height: 50px;
+    margin-left: auto;
+    margin-right: auto;
+
+    @media screen and (min-width: 768px) {
+      width: 450px;
+    }
+
+    @media screen and (min-width: 1200px) {
+      width: 358px;
+    }
+
+    @media screen and (max-width: 1199px) {
+      margin-bottom: 20px;
+    }
   }
 
   &__label {
     position: absolute;
-    left: 15px;
+    left: 16px;
     top: 50%;
     transform: translateY(-50%);
     font-size: 16px;
