@@ -13,6 +13,11 @@
       rgba(47, 48, 58, 0.4) 50%
     ),
     url(../images/hero_mb.jpg);
+  background-image: linear-gradient(
+      rgba(47, 48, 58, 0.4) 50%,
+      rgba(47, 48, 58, 0.4) 50%
+    ),
+    image-set(url('../images/hero_mb.webp') 1x);
 
   @media (min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),
@@ -22,6 +27,11 @@
         rgba(47, 48, 58, 0.4) 50%
       ),
       url(../images/hero@2x_mb.jpg);
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4) 50%,
+        rgba(47, 48, 58, 0.4) 50%
+      ),
+      image-set(url('../images/hero@2x_mb.webp') 2x);
   }
 
   @media screen and (min-width: 768px) {
@@ -31,6 +41,11 @@
         rgba(47, 48, 58, 0.4) 50%
       ),
       url(../images/hero_tb.jpg);
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4) 50%,
+        rgba(47, 48, 58, 0.4) 50%
+      ),
+      image-set(url('../images/hero_tb.webp') 1x);
 
     @media (min-device-pixel-ratio: 2),
       (min-resolution: 192dpi),
@@ -40,6 +55,11 @@
           rgba(47, 48, 58, 0.4) 50%
         ),
         url(../images/hero@2x_tb.jpg);
+      background-image: linear-gradient(
+          rgba(47, 48, 58, 0.4) 50%,
+          rgba(47, 48, 58, 0.4) 50%
+        ),
+        image-set(url('../images/hero@2x_tb.webp') 2x);
     }
   }
 
@@ -52,6 +72,11 @@
         rgba(47, 48, 58, 0.4) 50%
       ),
       url(../images/hero_dt.jpg);
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4) 50%,
+        rgba(47, 48, 58, 0.4) 50%
+      ),
+      image-set(url('../images/hero_dt.webp') 1x);
 
     @media (min-device-pixel-ratio: 2),
       (min-resolution: 192dpi),
@@ -61,6 +86,11 @@
           rgba(47, 48, 58, 0.4) 50%
         ),
         url(../images/hero@2x_dt.jpg);
+      background-image: linear-gradient(
+          rgba(47, 48, 58, 0.4) 50%,
+          rgba(47, 48, 58, 0.4) 50%
+        ),
+        image-set(url('../images/hero@2x_dt.webp') 2x);
     }
   }
 

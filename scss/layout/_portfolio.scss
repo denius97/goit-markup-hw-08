@@ -16,6 +16,7 @@
     @media screen and (max-width: 767px) {
       justify-content: left;
       margin-bottom: 40px;
+      gap: 15px 8px;
     }
 
     @media screen and (min-width: 768px) {
@@ -28,8 +29,10 @@
   }
 
   &__card {
-    display: block;
+    display: flex;
+    flex-direction: column;
     transition: box-shadow var(--main-transition);
+    height: 100%;
   }
 
   &__card:hover,
@@ -58,6 +61,7 @@
     background-color: rgba(33, 150, 243, 0.9);
     transform: translateY(100%);
     transition: transform var(--main-transition);
+    overflow: auto;
   }
 
   &__card:hover &__text,
@@ -69,11 +73,7 @@
     padding: 20px 24px;
     border: 1px solid var(--portfolio-border);
     border-top: none;
-    @media screen and (min-width: 768px) and (max-width: 1199px) {
-      .flex-list__item:first-child & {
-        min-height: 146px;
-      }
-    }
+    flex-grow: 1;
   }
 
   &__subtitle {
