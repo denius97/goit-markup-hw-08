@@ -11,8 +11,7 @@
     border: none;
     z-index: 3;
 
-    &:hover,
-    &:focus &__icon {
+    &:active &__icon {
       fill: var(--accent-txt-col);
     }
 
